@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="494.0" prefWidth="600.0" stylesheets="@Bankai.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="courseenrollment.SignupController">
+   <right>
+      <VBox alignment="CENTER" prefWidth="300.0" spacing="10.0" styleClass="glass-background" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="87.0" fitWidth="112.0" pickOnBounds="true" preserveRatio="true" styleClass="hover-image">
+               <image>
+                  <Image url="@../image/logo%20png.png" />
+               </image>
+            </ImageView>
+            <Label styleClass="main-title" text="Welcome SMUCT" />
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="361.0" styleClass="subtitle" />
+            <TextField fx:id="tfName" promptText="Name" styleClass="form-input" />
+            <TextField fx:id="tfUsername" promptText="Username" styleClass="form-input" />
+            <TextField fx:id="tfContact" promptText="Contact" styleClass="form-input" />
+            <PasswordField fx:id="pfPass" promptText="Password" styleClass="form-input" />
+            <PasswordField fx:id="pfCPass" promptText="Confirm password" styleClass="form-input" />
+            <Button fx:id="signupBtn" mnemonicParsing="false" onAction="#Signup" styleClass="signup-button" text="Sign up" />
+            <HBox alignment="CENTER" prefHeight="20.0" prefWidth="284.0" spacing="2.0">
+               <children>
+                  <Label styleClass="subtitle" text="Already have an account" />
+                  <Hyperlink fx:id="SigninLink" onAction="#Signin" styleClass="hover-image" text="sign in">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Hyperlink>
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets left="8.0" right="8.0" />
+         </padding>
+      </VBox>
+   </right>
+   <left>
+      <VBox prefHeight="494.0" prefWidth="299.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="436.0" fitWidth="299.0" pickOnBounds="true" preserveRatio="true" styleClass="hover-image">
+               <image>
+                  <Image url="@../image/logo%20png.png" />
+               </image>
+               <VBox.margin>
+                  <Insets top="55.0" />
+               </VBox.margin>
+            </ImageView>
+         </children>
+      </VBox>
+   </left>
+</BorderPane>

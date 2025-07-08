@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane fx:id="mainPane" xmlns:fx="http://javafx.com/fxml" fx:controller="dashboard.dashboardController">
+
+    <!-- Top Bar -->
+    <top>
+        <HBox styleClass="top-bar" spacing="10" alignment="CENTER_LEFT" padding="10">
+            <Label text="🎓 Course Enrollment System" styleClass="title-label"/>
+        </HBox>
+    </top>
+
+    <!-- Side Menu -->
+    <left>
+        <VBox spacing="10" padding="20" styleClass="side-bar">
+            <Button text="🏠 Home" onAction="#goHome"/>
+            <Button text="📝 Enroll" onAction="#goEnroll"/>
+            <Button text="📚 Courses" onAction="#goCourses"/>
+            <Button text="📊 Results" onAction="#goResults"/>
+            <Button text="🚪 Logout" onAction="#logout"/>
+        </VBox>
+    </left>
+
+    <!-- Main Content -->
+    <center>
+        <AnchorPane fx:id="contentArea" styleClass="content-area"/>
+    </center>
+
+</BorderPane>
